@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Oficial - Escavadeira RC YIKONG T02560</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .main-image-container {
+            height: 60vw; /* Altura responsiva baseada na largura da viewport */
+            max-height: 500px; /* Altura máxima em telas grandes */
+        }
+        .thumbnail {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid transparent;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .thumbnail.active {
+            border-color: #FBBF24; /* amber-400 */
+        }
+        /* Melhora a barra de rolagem da galeria no Firefox */
+        .scrollbar-thin {
+            scrollbar-width: thin;
+            scrollbar-color: #e5e7eb #f9fafb;
+        }
+        /* Melhora a barra de rolagem da galeria no Chrome, Safari e Edge */
+        .scrollbar-thin::-webkit-scrollbar {
+            height: 6px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #f9fafb;
+            border-radius: 3px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background-color: #e5e7eb;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div>
+                <div class="text-xl sm:text-2xl font-bold text-gray-900 leading-tight">
+                    <span class="text-amber-500">YIKONG</span> HOBBY
+                </div>
+                <p class="text-xs font-normal text-gray-500 -mt-1">Distribuidora Oficial</p>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-amber-500">Modelos</a>
+                <a href="#" class="text-gray-600 hover:text-amber-500">Peças</a>
+                <a href="#" class="text-gray-600 hover:text-amber-500">Sobre Nós</a>
+                <a href="#" class="text-gray-600 hover:text-amber-500">Contato</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#" class="block py-3 px-4 text-gray-700 hover:bg-gray-50">Modelos</a>
+            <a href="#" class="block py-3 px-4 text-gray-700 hover:bg-gray-50">Peças</a>
+            <a href="#" class="block py-3 px-4 text-gray-700 hover:bg-gray-50">Sobre Nós</a>
+            <a href="#" class="block py-3 px-4 text-gray-700 hover:bg-gray-50">Contato</a>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                
+                <!-- Image Gallery -->
+                <div class="flex flex-col gap-4">
+                    <div class="main-image-container bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img id="mainImage" src="2.jpg" alt="[Imagem principal da Escavadeira YIKONG T02560]" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Thumbnail Gallery - Scrollable on small screens -->
+                    <div class="flex gap-2 sm:gap-4 overflow-x-auto pb-2 scrollbar-thin">
+                        <img src="2.jpg" alt="[Vista lateral da escavadeira]" class="thumbnail active w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md flex-shrink-0" onclick="changeImage('2.jpg', this)">
+                        <img src="1.jpg" alt="[Vista superior da escavadeira]" class="thumbnail w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md flex-shrink-0" onclick="changeImage('1.jpg', this)">
+                        <img src="3.jpg" alt="[Outro ângulo da escavadeira]" class="thumbnail w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md flex-shrink-0" onclick="changeImage('3.jpg', this)">
+                        <img src="4.jpg" alt="[Controle remoto da escavadeira]" class="thumbnail w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md flex-shrink-0" onclick="changeImage('4.jpg', this)">
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Escavadeira Hidráulica RC YIKONG T02560</h1>
+                    <p class="text-gray-500 text-base md:text-lg mb-4">Modelo Profissional em Escala</p>
+                    
+                    <div class="flex items-baseline gap-3 mb-6">
+                         <span class="text-3xl md:text-4xl font-bold text-amber-500">R$ 297,00</span>
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Experimente o realismo e a potência em suas mãos. A escavadeira YIKONG T02560 é um modelo em escala de alta precisão, projetado para entusiastas de todas as idades que buscam uma experiência autêntica de operação de maquinário pesado.
+                    </p>
+
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Principais Características:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Controle remoto <strong>2.4GHz Yi Gong</strong> para operação precisa e sem interferências.</li>
+                            <li>Movimentos totalmente funcionais: braço, antebraço e caçamba operam independentemente.</li>
+                            <li>Construção robusta com esteiras de alta tração e corpo em ABS de alta densidade.</li>
+                            <li>Design em escala detalhado para máximo realismo.</li>
+                            <li>Bateria recarregável de longa duração para mais tempo de diversão.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="w-full bg-amber-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-amber-600 transition-all duration-300 transform hover:scale-105">
+                            Adicionar ao Carrinho
+                        </button>
+                        <button class="w-full bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-900 transition-all duration-300 transform hover:scale-105">
+                            Comprar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Detailed Information Section -->
+    <section class="bg-gray-50 py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6">
+             <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">Detalhes do Produto</h2>
+                <div class="space-y-6 text-gray-700">
+                    <p>A escavadeira <strong>YIKONG T02560</strong> redefine o padrão para modelos de controle remoto. Cada detalhe, desde as mangueiras hidráulicas simuladas até os sons realistas do motor (recurso opcional), foi projetado para uma imersão completa. O chassi robusto e as esteiras de borracha garantem a movimentação em diversos tipos de terreno, como areia, terra ou cascalho.</p>
+                    <p>O coração do sistema é o controle remoto <strong>Yi Gong de 2.4GHz</strong>, que oferece uma conexão estável e responsiva. Com seus joysticks duplos, você tem controle total sobre a movimentação da esteira e a operação complexa do braço de escavação, permitindo realizar tarefas com a mesma precisão de uma máquina real.</p>
+                </div>
+
+                <div class="mt-10">
+                    <h3 class="text-xl md:text-2xl font-bold text-center text-gray-900 mb-6">Especificações Técnicas</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Marca</td>
+                                    <td class="py-3 px-4 text-gray-600">YIKONG</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Modelo</td>
+                                    <td class="py-3 px-4 text-gray-600">T02560</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Escala</td>
+                                    <td class="py-3 px-4 text-gray-600">1:16 (aprox.)</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Frequência</td>
+                                    <td class="py-3 px-4 text-gray-600">2.4GHz</td>
+                                </tr>
+                                 <tr class="border-b">
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Material</td>
+                                    <td class="py-3 px-4 text-gray-600">Plástico ABS de alta resistência, componentes eletrônicos</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Bateria</td>
+                                    <td class="py-3 px-4 text-gray-600">7.4V Li-ion Recarregável (inclusa)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold text-gray-800">Bateria do Controle</td>
+                                    <td class="py-3 px-4 text-gray-600">2x Pilhas AA (não inclusas)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Distribuidora Oficial YIKONG HOBBY. Todos os direitos reservados.</p>
+            <p class="text-gray-400 text-sm mt-2">Uma experiência de hobby levada a sério.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Script para a galeria de imagens ---
+        function changeImage(imageSrc, clickedElement) {
+            // Altera a imagem principal
+            document.getElementById('mainImage').src = imageSrc;
+
+            // Gerencia o estado 'active' para as miniaturas
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            clickedElement.classList.add('active');
+        }
+
+        // --- Script para o menu mobile ---
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
